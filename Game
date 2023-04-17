@@ -1,3 +1,4 @@
+#Game Stone, Paper, Scissors
 import random
 while True:
     my_point=0
