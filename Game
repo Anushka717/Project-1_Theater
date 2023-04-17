@@ -1,1 +1,52 @@
+import random
+while True:
+    my_point=0
+    Your_point=0
+    x = int(input('''
+    Press 1 to Play
+    2 to Exit:
+    '''))
+    if x==1:
+        print('lets play Stone, Paper, Scissors')
+        for i in range (1,4):
+            a = int(input('''make your choice: 
+                       1 for Stone 
+                       2 for Paper 
+                       3 for Scissors:'''))
+            ch=""
+            if a==1:
+                ch="Stone"
+            elif a==2:
+                ch="Paper"
+            elif a==3:
+                ch="Scissors"
+            print('.................My turn.................')
+            b = random.choice(["Stone", "Paper", "Scissors"])
+            if ch==b:
+                print(f"my choice {b}")
+                print(f"your choice {ch}")
+                print("Game Draw")
+            elif (ch=="Stone" and b=="Paper") or (ch=="Paper" and b=="Scissors") or (ch=="Scissors" and b=="Stone"):
+                print(f"my choice {b}")
+                print(f"your choice {ch}")
+                print("I Won")
+                my_point += 1
+                #Your_point += 1
+            elif (b=="Stone" and ch=="Paper") or (b=="Paper" and ch=="Scissors") or (b=="Scissors" and ch=="Stone"):
+                print(f"my choice {b}")
+                print(f"your choice {ch}")
+                print("You Won")
+                my_point += 1
+                #Your_point += 1
+        print(f"my_point={my_point},Your_point={Your_point}")
+        if my_point>Your_point:
+            print("I won this game")
+        elif Your_point > my_point:
+                print("You won this game")
+        else:
+            print("Draw")
+
+    else:
+        break
+
 
