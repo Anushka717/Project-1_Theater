@@ -18,7 +18,7 @@ while True:
         print("Good Evening")
 
     while True:
-        Seat_choice = input('If you want Recliners press 1, For Normal_seats press 2: ')
+        Seat_choice = input('If you want Recliners 350rs press 1, For Normal_seats 250rs press 2: ')
         if Normal_seats == 0 and Recliners == 0:
             print(f"oops, Sorry {Name} houseful")
             print("Final Total:", total)
