@@ -1,0 +1,56 @@
+User_data={"Harry":"Potter","Arya":"Stark","Neville":"Longbottom","Rupert":"Grint"}
+Books={"maths":10,"science":10,"gk":5,"stories":4}
+
+while True:
+    User_name = input("enter User_name:")
+    password = input("enter password:")
+    while True:
+        if User_name in User_data.keys():
+            if password == User_data[User_name]:
+                a = int(input('''enter your choice
+                Press 1 to Add Book
+                Press 2 to Borrow Book
+                Press 3 to Return Book
+                Press 4 to see Available Books:'''))
+                if a == 4:
+                    print(Books)
+                    break
+                elif a == 1:
+                    b = input("Which book you wanna add?:")
+                    b.lower()
+                    k = int(input("How many books you want to add?:"))
+                    if b in Books:
+                        Books[b] += k
+                    else:
+                        Books[b] = k
+                    print("Now we have", Books)
+                elif a == 2:
+                    c = input("Which book you wanna Take away?:")
+                    c.lower()
+                    l = int(input("How many books you want to Take away?:"))
+                    if c in Books:
+                        if l <= Books[c]:
+                            Books[c] -= l
+                            print("Now we have", Books)
+                        elif Books[c]==0:
+                            print(f"no more {c} book for now")
+                        else:
+                            print(f"we have only {Books[c]} {c} books, so choose out of {Books[c]}")
+                    else:
+                        print("Now we have only", Books, "so make choice out of them")
+                elif a == 3:
+                    d = input("Which book you wanna Return?:")
+                    d.lower()
+                    m = int(input("How many books you want to Return?:"))
+                    if d in Books:
+                        Books[d] += m
+                    else:
+                        Books[d] = m
+                    print("Now we have", Books)
+
+            else:
+                print("invalid password")
+                break
+        else:
+            print("You are not an Existing user, Either try valid credentials or go register yourself")
+            break
