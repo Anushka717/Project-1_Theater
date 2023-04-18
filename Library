@@ -7,6 +7,7 @@ while True:
     while True:
         if User_name in User_data.keys():
             if password == User_data[User_name]:
+                print(f"Hi {User_name},Welcome!!")
                 a = int(input('''enter your choice
                 Press 1 to Add Book
                 Press 2 to Borrow Book
@@ -14,6 +15,7 @@ while True:
                 Press 4 to see Available Books or Return to Home page:'''))
                 if a == 4:
                     print(Books)
+                    print(f"Thanks for coming {User_name}, Visit again!!")
                     break
                 elif a == 1:
                     print(Books)
