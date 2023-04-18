@@ -1,3 +1,19 @@
+# noinspection SpellCheckingInspection
+'''
+project:
+Theater/Stadium
+total seat=150
+normal=130  250rs
+recliner=20   380rs
+
+Seat type and no of seat=ask user
+or ask for combo
+total=?
+say left seats no
+say full when no seat left
+and housefull
+'''
+#while True:
 seats={"Normal_seats": 130,"Recliners": 20}
 while True:
     from datetime import datetime
@@ -54,7 +70,7 @@ while True:
                 if seat<=seats["Normal_seats"]:
                     seats["Normal_seats"] -= seat
                     total = total + seat * 150
-                    x = input('Need anything else: (press 1 for any other seat, 2 for 100rs Snacks,say N if done):')
+                    x = input('Need anything else: (press 1 for any other seat, 2 for Snacks 100rs,say N if done):')
                     if x != "1" and x != "2":
                         print("ok nothing added more, Final Total:", total)
                         break
@@ -62,6 +78,7 @@ while True:
                         print("Yayy!!, Meal added")
                         total = total + 150
                         print("Final Total including meal:", total)
+                        break
                     elif x == "1":
                         continue
                 else:
@@ -73,3 +90,11 @@ while True:
         else:
             print(f"Wrong choice dear {Name},Try again between 1&2")
             continue
+
+    #break
+
+
+
+
+
+
