@@ -21,8 +21,10 @@ while True:
                     b=b.lower()
                     k = int(input("How many books you want to add?:"))
                     if b in Books:
+                        print("Book added")
                         Books[b] += k
                     else:
+                        print("Book added")
                         Books[b] = k
                     print("Now we have", Books)
                 elif a == 2:
@@ -33,6 +35,7 @@ while True:
                     if c in Books:
                         if l <= Books[c]:
                             Books[c] -= l
+                            print("Collect your book")
                             print("Now we have", Books)
                         elif Books[c]==0:
                             print(f"no more {c} book for now")
@@ -46,8 +49,10 @@ while True:
                     d=d.lower()
                     m = int(input("How many books you want to Return?:"))
                     if d in Books:
+                        print("Book submitted thaks for returning")
                         Books[d] += m
                     else:
+                        print("Book submitted thaks for returning")
                         Books[d] = m
                     print("Now we have", Books)
 
