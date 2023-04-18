@@ -11,11 +11,12 @@ while True:
                 Press 1 to Add Book
                 Press 2 to Borrow Book
                 Press 3 to Return Book
-                Press 4 to see Available Books:'''))
+                Press 4 to see Available Books or Return to Home page:'''))
                 if a == 4:
                     print(Books)
                     break
                 elif a == 1:
+                    print(Books)
                     b = input("Which book you wanna add?:")
                     b=b.lower()
                     k = int(input("How many books you want to add?:"))
@@ -25,6 +26,7 @@ while True:
                         Books[b] = k
                     print("Now we have", Books)
                 elif a == 2:
+                    print(Books)
                     c = input("Which book you wanna Take away?:")
                     c=c.lower()
                     l = int(input("How many books you want to Take away?:"))
@@ -39,6 +41,7 @@ while True:
                     else:
                         print(f"This {c} is not in our collection, Now we have only {Books} so make choice out of them")
                 elif a == 3:
+                    print(Books)
                     d = input("Which book you wanna Return?:")
                     d=d.lower()
                     m = int(input("How many books you want to Return?:"))
