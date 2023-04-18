@@ -30,7 +30,7 @@ while True:
                 if seat<=seats["Recliners"]:
                     seats["Recliners"] -= seat
                     total = total + seat * 350
-                    x = input('Need anything else: (press 1 for any other seat, 2 for Snacks,say N if done):')
+                    x = input('Need anything else: (press 1 for any other seat, 2 for Snacks 100rs,say N if done):')
                     if x != "1" and x != "2":
                         print("ok nothing added more, Final Total:", total)
                         break
@@ -54,7 +54,7 @@ while True:
                 if seat<=seats["Normal_seats"]:
                     seats["Normal_seats"] -= seat
                     total = total + seat * 150
-                    x = input('Need anything else: (press 1 for any other seat, 2 for Snacks,say N if done):')
+                    x = input('Need anything else: (press 1 for any other seat, 2 for 100rs Snacks,say N if done):')
                     if x != "1" and x != "2":
                         print("ok nothing added more, Final Total:", total)
                         break
