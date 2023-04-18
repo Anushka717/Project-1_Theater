@@ -17,7 +17,7 @@ while True:
                     break
                 elif a == 1:
                     b = input("Which book you wanna add?:")
-                    b.lower()
+                    b=b.lower()
                     k = int(input("How many books you want to add?:"))
                     if b in Books:
                         Books[b] += k
@@ -26,7 +26,7 @@ while True:
                     print("Now we have", Books)
                 elif a == 2:
                     c = input("Which book you wanna Take away?:")
-                    c.lower()
+                    c=c.lower()
                     l = int(input("How many books you want to Take away?:"))
                     if c in Books:
                         if l <= Books[c]:
@@ -37,10 +37,10 @@ while True:
                         else:
                             print(f"we have only {Books[c]} {c} books, so choose out of {Books[c]}")
                     else:
-                        print("Now we have only", Books, "so make choice out of them")
+                        print(f"This {c} is not in our collection, Now we have only {Books} so make choice out of them")
                 elif a == 3:
                     d = input("Which book you wanna Return?:")
-                    d.lower()
+                    d=d.lower()
                     m = int(input("How many books you want to Return?:"))
                     if d in Books:
                         Books[d] += m
